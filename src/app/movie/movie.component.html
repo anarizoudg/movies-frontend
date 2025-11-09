@@ -1,0 +1,29 @@
+<div class="container my-5" *ngIf="movie && !error">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card bg-dark text-light border-0 shadow-lg p-4 movie-detail">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-5 text-center">
+            <img [src]="'assets/images/' + movie.cover" class="card-img-top" alt="{{ movie.title }}">
+          </div>
+          <div class="col-md-7">
+            <h2 class="mb-3">{{ movie.title }}</h2>
+            <p class="text-secondary">Año: {{ movie.year }}</p>
+            <p class="synopsis">{{ movie.synopsis }}</p>
+          </div>
+          <!-- Contenedor de botones -->
+          <div class="d-flex justify-content-center gap-3 mt-3">
+            <a [routerLink]="['/movies/edit', movie.id]" class="btn btn-warning">Editar</a>
+            <button class="btn btn-danger" (click)="deleteMovie()">Eliminar</button>
+            <a routerLink="/movies" class="btn btn-outline-light">Volver</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="error" class="text-center text-light mt-5">
+  <h4>No se encontró la película.</h4>
+  <a routerLink="/" class="btn btn-outline-light mt-3">Volver al catálogo</a>
+</div>
