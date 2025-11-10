@@ -1,0 +1,108 @@
+:host {
+  display: block;
+  background-color: #141414;
+  color: #fff;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Contenedor general */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título */
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Botón superior (Agregar película) */
+.text-end {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.text-end .btn {
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+
+/* Grid de películas */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Tarjeta de película */
+.movie-card {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  color: inherit;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.6);
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Información de la tarjeta */
+.movie-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.movie-info h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.movie-info p {
+  margin: 0;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Botones de acción dentro de cada tarjeta */
+.card-body .btn {
+  border-radius: 6px;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.card-body .btn-warning {
+  background-color: #f5c542;
+  border: none;
+  color: #222;
+}
+
+.card-body .btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
+}

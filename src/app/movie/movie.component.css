@@ -1,0 +1,48 @@
+.card {
+  max-width: 700px; /* un poco más ancha */
+  margin: 2rem auto; /* espacio arriba y abajo */
+  border-radius: 15px;
+  background: linear-gradient(145deg, #1e1e1e, #0e0e0e);
+  overflow: hidden;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 450px; /* más alta */
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-body h2 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.synopsis {
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 3rem; /* espacio antes de los botones */
+}
+
+/* Botones */
+.card-body .btn {
+  min-width: 140px;
+  padding: 0.6rem 1.8rem;
+  border-radius: 30px;
+  margin-right: 1rem; /* separación entre botones */
+  transition: all 0.3s ease;
+}
+
+.card-body .btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
+}
