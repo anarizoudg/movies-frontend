@@ -3,8 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+<<<<<<< HEAD
     "start": "ng serve",
     "build": "ng build",
+=======
+    "start": "npx serve -s dist/movies-frontend/browser -l $PORT",
+    "build": "ng build --configuration production",
+>>>>>>> b986076f00f84b00875d61b5b0b24b4c89cfe92a
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

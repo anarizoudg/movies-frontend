@@ -7,6 +7,11 @@
 /bazel-out
 
 # Node
+<<<<<<< HEAD
+=======
+node_modules
+node_modules/
+>>>>>>> b986076f00f84b00875d61b5b0b24b4c89cfe92a
 /node_modules
 npm-debug.log
 yarn-error.log
