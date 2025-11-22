@@ -1,19 +1,14 @@
 {
   "name": "movies-frontend",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "ng": "ng",
-<<<<<<< HEAD
-    "start": "ng serve",
-    "build": "ng build",
-=======
     "start": "npx serve -s dist/movies-frontend/browser -l $PORT",
     "build": "ng build --configuration production",
->>>>>>> b986076f00f84b00875d61b5b0b24b4c89cfe92a
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
-  "private": true,
   "dependencies": {
     "@angular/common": "^19.2.0",
     "@angular/compiler": "^19.2.0",

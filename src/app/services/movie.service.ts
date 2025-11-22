@@ -15,13 +15,10 @@ export interface Movie {
 })
 export class MovieService {
 
-<<<<<<< HEAD
-  private apiUrl = 'http://127.0.0.1:8000/api/movies';
-=======
+  // URL de producción en Railway
   private apiUrl = 'https://moviescatalog-production.up.railway.app/api/movies';
->>>>>>> b986076f00f84b00875d61b5b0b24b4c89cfe92a
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   // Traer todas las películas
   getMovies(): Observable<Movie[]> {
