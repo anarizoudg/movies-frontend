@@ -21,7 +21,7 @@ h2 {
   text-align: center;
 }
 
-/* Botón superior (Agregar película) */
+/* Botón superior */
 .text-end {
   display: flex;
   justify-content: flex-end;
@@ -34,14 +34,40 @@ h2 {
   font-weight: 500;
 }
 
-/* Grid de películas */
+/* ============================== */
+/*           GRID RESPONSIVO      */
+/* ============================== */
 .movies-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
-/* Tarjeta de película */
+/* Tablet */
+@media (max-width: 992px) {
+  .movies-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets pequeñas */
+@media (max-width: 768px) {
+  .movies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  .movies-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* ============================== */
+/*       Tarjeta de película      */
+/* ============================== */
+
 .movie-card {
   display: block;
   border-radius: 10px;
@@ -61,11 +87,11 @@ h2 {
   object-fit: cover;
 }
 
-.movie-card img {
-  width: 100%;
-  height: 270px;
-  object-fit: cover;
-  display: block;
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 480px) {
+  .card-img-top {
+    height: 230px;
+  }
 }
 
 /* Información de la tarjeta */
@@ -89,7 +115,7 @@ h2 {
   font-size: 0.9rem;
 }
 
-/* Botones de acción dentro de cada tarjeta */
+/* Botones dentro de la tarjeta */
 .card-body .btn {
   border-radius: 6px;
   font-size: 0.85rem;
